@@ -1,0 +1,12 @@
+h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #0D6EFD;
+
+    span {
+        color: #ffa237;
+    }
+}

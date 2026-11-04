@@ -10,8 +10,8 @@ services:
 
   frontend:
     build: ./Frontend-ProjetoAgenda
-    ports:
-      - "80:80"
+    expose:
+      - "80"
     depends_on:
       - backend
 

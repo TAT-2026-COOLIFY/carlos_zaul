@@ -1,15 +1,18 @@
 services:
   backend:
     build: ./Backend-ProjetoAgenda
+    restart: unless-stopped
     environment:
       SPRING_DATASOURCE_URL: jdbc:h2:file:/data/agenda
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_OPEN_IN_VIEW: "false"
       SPRING_H2_CONSOLE_ENABLED: "false"
     volumes:
       - dados-h2:/data
 
   frontend:
     build: ./Frontend-ProjetoAgenda
+    restart: unless-stopped
     expose:
       - "80"
     depends_on:
